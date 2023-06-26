@@ -1,9 +1,7 @@
-
-
 export default function Home() {
   return (
-    <body>
+    <main>
       <div>HEllo</div>
-    </body>
+    </main>
   );
 }
