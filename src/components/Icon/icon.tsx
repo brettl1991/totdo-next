@@ -1,25 +1,19 @@
 import styled from "styled-components";
-import SunIcon from "../../../public/icons/sun.svg";
-import MoonIcon from "../../../public/icons/moon.svg";
+import { TIconType } from "./icon.type";
+import Image from "next/image";
 
-const Icon = () => {
+const Icon = ({ src }: TIconType) => {
   return (
-    <SIcon>
-      <SSun src={SunIcon.src} alt="sun" />
-      <SMoon src={MoonIcon.src} alt="moon" />
-    </SIcon>
+    <SWrapper>
+      <Image src={src} alt="icon" fill={true} />
+    </SWrapper>
   );
 };
 
 export default Icon;
 
-const SIcon = styled.div`
-  width: 50px;
-  height: 50px;
-`;
-
-const SSun = styled.img``;
-
-const SMoon = styled.img`
-  display: none;
+const SWrapper = styled.div`
+  position: relative;
+  width: 100px;
+  height: 100px;
 `;
