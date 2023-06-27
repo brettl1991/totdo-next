@@ -11,4 +11,8 @@ const STitle = styled.div`
   font-size: 4rem;
   font-weight: 700;
   letter-spacing: 2rem;
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
 `;

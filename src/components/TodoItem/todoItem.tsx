@@ -15,8 +15,12 @@ const SList = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 10px;
   padding: 0;
+  @media (max-width: 480px) {
+    gap: 10px;
+    align-items: center;
+  }
 `;
 
 const SListIcon = styled.li`
@@ -28,4 +32,10 @@ const SListIcon = styled.li`
   border-radius: 10px;
   border: none;
   height: 43px;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 35px;
+  }
 `;
