@@ -1,11 +1,16 @@
-import TodoIcon from "../TodoIcon/todoIcon";
+import styled from "styled-components";
+import TodoIcon from "../TodoItem/todoItem";
 
 const TodoList = () => {
   return (
-    <ul>
+    <SContainer>
       <TodoIcon />
-    </ul>
+    </SContainer>
   );
 };
 
 export default TodoList;
+
+const SContainer = styled.div`
+  display: flex;
+`;

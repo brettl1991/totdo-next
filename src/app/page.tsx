@@ -11,60 +11,39 @@ export default function Home() {
   return (
     <main>
       <SMainContainer>
-        <BackgroundImageContainer>
-          <BackgroundImage />
-        </BackgroundImageContainer>
-        <ContentContainer>
+        <SContentContainer>
           <STopContainer>
             <Text />
             <Icon src={SunIcon} />
           </STopContainer>
           <Input />
-          <div>
-            <TodoList />
-          </div>
-        </ContentContainer>
+
+          <TodoList />
+        </SContentContainer>
       </SMainContainer>
     </main>
   );
 }
 
 const SMainContainer = styled.div`
-  position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-image: url("./todo.jpeg");
+  background-size: 100% 550px;
+  background-repeat: no-repeat;
+  background-color: rgba(37, 39, 60, 0.8);
 `;
 
-const ContentContainer = styled.div`
-  position: relative;
-  z-index: 1;
+const SContentContainer = styled.div`
+  min-width: 800px;
 `;
 
 const STopContainer = styled.div`
-  min-width: 800px;
   margin-top: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
-
-const BackgroundImageContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`;
-
-const BackgroundImage = styled.div`
-  width: 100%;
-  height: 100%;
-  background-image: url("./todo.jpeg");
-  background-size: 100% 550px;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  background-color: #25273c;
 `;
