@@ -3,3 +3,7 @@ export type Todo = {
   text: string;
   completed: boolean;
 };
+
+export type SListIconProps = {
+  completed: boolean;
+};

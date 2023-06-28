@@ -1,16 +1,26 @@
 import styled from "styled-components";
+import { SListIconProps } from "../TodoList/todoList.type";
+import { TodoItemProps } from "./todoItem.type";
 
-const TodoItem = () => {
+const TodoItem = ({ todo, markComplete }: TodoItemProps) => {
+  const handleCheckboxChange = () => {
+    markComplete(todo.id);
+  };
+
   return (
-    <SList>
-      <SListIcon>Jog around the park</SListIcon>
-      <SListIcon>10 minutes meditation</SListIcon>
-      <SListIcon>Study for 5 hours</SListIcon>
-    </SList>
+    <SListIcon completed={todo.completed}>
+      <input
+        type="checkbox"
+        checked={todo.completed}
+        onChange={handleCheckboxChange}
+      />
+      <span>{todo.text}</span>
+    </SListIcon>
   );
 };
 
 export default TodoItem;
+
 const SList = styled.ul`
   list-style: none;
   display: flex;
@@ -23,7 +33,7 @@ const SList = styled.ul`
   }
 `;
 
-const SListIcon = styled.li`
+const SListIcon = styled.li<SListIconProps>`
   padding: 1rem;
   background-color: #25273c;
   width: 800px;
@@ -33,6 +43,12 @@ const SListIcon = styled.li`
   border: none;
   height: 43px;
   text-align: center;
+
+  ${(props) =>
+    props.completed &&
+    `
+      text-decoration: line-through;
+    `}
 
   @media (max-width: 480px) {
     width: 100%;
