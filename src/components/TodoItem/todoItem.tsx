@@ -21,18 +21,6 @@ const TodoItem = ({ todo, markComplete }: TodoItemProps) => {
 
 export default TodoItem;
 
-const SList = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0;
-  @media (max-width: 480px) {
-    gap: 10px;
-    align-items: center;
-  }
-`;
-
 const SListIcon = styled.li<SListIconProps>`
   padding: 1rem;
   background-color: #25273c;

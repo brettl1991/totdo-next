@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import TodoIcon from "../TodoItem/todoItem";
 import { useState } from "react";
 import { Todo } from "./todoList.type";
 import TodoItem from "../TodoItem/todoItem";
