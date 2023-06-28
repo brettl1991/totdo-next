@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Input = () => {
   return (
     <SForm>
-      <SInput type="text" value="Create a new todo..." />
+      <SInput type="text" placeholder="Create a new todo..." />
     </SForm>
   );
 };
