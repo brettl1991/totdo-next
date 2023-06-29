@@ -33,8 +33,6 @@ const SContainer = styled.div`
   margin-top: 50px;
   list-style: none;
   flex-direction: column;
-  gap: 10px;
-  padding: 0;
 
   @media (max-width: 480px) {
     margin-top: 50px;
