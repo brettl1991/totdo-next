@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main>
       <SMainContainer>
-        <SContentContainer>
+        <div>
           <STopContainer>
             <Text />
             <Icon src={SunIcon} />
@@ -19,7 +19,7 @@ export default function Home() {
           <Input />
 
           <TodoList />
-        </SContentContainer>
+        </div>
       </SMainContainer>
     </main>
   );
@@ -38,12 +38,6 @@ const SMainContainer = styled.div`
 
   @media (max-width: 480px) {
     background-size: contain;
-  }
-`;
-
-const SContentContainer = styled.div`
-  @media (max-width: 480px) {
-    width: 100%;
   }
 `;
 
